@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Menu{
@@ -33,6 +34,8 @@ public class Menu{
 
         System.out.println("-::::::::::::::::::::-");
         System.out.println("- COMPRAS REALIZADAS:\n");
+
+        Collections.sort(cartao.getCompras());
 
         for (Compra c : cartao.getCompras()) {
             System.out.println(c.getNome() + " - " +c.getValor());
